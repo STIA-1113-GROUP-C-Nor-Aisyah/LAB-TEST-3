@@ -1,0 +1,28 @@
+package labTest3;
+
+public class LabTest {
+
+	static int search(String[]arr, String s)
+    {
+            int counter = 0;
+            for (int j = 0; j < arr.length; j++)
+                if (s.equals(arr[j]))
+                    counter++;
+ 
+           return counter;
+    }
+ 
+    static void answerQueries(String[] arr, String q[])
+    {
+        for (int i=0;i<q.length; i++)
+            System.out.print(search(arr, q[i]) + " ");
+    }
+ 
+   
+    public static void main(String[] args) {
+ 
+        String[] arr = {"hello","world","hello","germany","hello","berlin"};
+        String[] q   = {"hello","world","germany","berlin"};
+        answerQueries(arr, q);
+    }
+}
